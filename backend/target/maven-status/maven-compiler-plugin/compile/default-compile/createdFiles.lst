@@ -1,0 +1,4 @@
+com\learningpath\LearningPathApplication.class
+com\learningpath\model\UserInput.class
+com\learningpath\service\LearningPathService.class
+com\learningpath\controller\LearningPathController.class

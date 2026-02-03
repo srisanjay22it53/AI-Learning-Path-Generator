@@ -1,0 +1,170 @@
+/* ===== Global ===== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #667eea, #764ba2);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Main Container ===== */
+.container {
+    width: 420px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* ===== Headings ===== */
+h1 {
+    text-align: center;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+h1 i, h2 i, button i {
+    margin-right: 6px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* ===== Input Card ===== */
+.card {
+    animation: slideUp 0.6s ease;
+}
+
+.card label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #444;
+}
+
+.card select,
+.card input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+/* ===== Generate Button ===== */
+.generate-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(118,75,162,0.4);
+}
+
+/* ===== Result Section ===== */
+.result {
+    margin-top: 30px;
+}
+
+.result h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* ===== Progress Bar ===== */
+.progress-container {
+    width: 100%;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+#progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    transition: width 0.4s ease-in-out;
+}
+
+/* ===== Timeline ===== */
+.timeline {
+    list-style: none;
+    padding-left: 0;
+}
+
+.timeline li {
+    background: #f7f7ff;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    position: relative;
+    font-weight: 500;
+    animation: fadeIn 0.4s ease;
+    transition: transform 0.3s ease;
+}
+
+.timeline li:hover {
+    transform: scale(1.02);
+}
+
+.timeline li::before {
+    content: "✔";
+    color: #667eea;
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+/* ===== Download Button ===== */
+.download-btn {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background: #764ba2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.download-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(118,75,162,0.4);
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

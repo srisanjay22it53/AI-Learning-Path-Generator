@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Learning Path Generator</title>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>
+        <i class="fa-solid fa-brain"></i>
+        AI Learning Path Generator
+    </h1>
+    <p class="subtitle">Personalized roadmap based on your goals</p>
+
+    <!-- INPUT CARD -->
+    <div class="card">
+        <label>Skill Level</label>
+        <select id="skill">
+            <option>Beginner</option>
+            <option>Intermediate</option>
+            <option>Advanced</option>
+        </select>
+
+        <label>Career Goal</label>
+        <select id="goal">
+            <option>AI</option>
+            <option>Java</option>
+        </select>
+
+        <label>Hours per Week</label>
+        <input type="number" id="hours" placeholder="Eg: 5">
+
+        <button onclick="generate()" class="generate-btn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            Generate Learning Path
+        </button>
+    </div>
+
+    <!-- RESULT SECTION -->
+    <div id="result" class="result hidden">
+        <h2>
+            <i class="fa-solid fa-road"></i>
+            Your Learning Path
+        </h2>
+
+        <!-- PROGRESS BAR -->
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <!-- TIMELINE OUTPUT -->
+        <ul id="output" class="timeline"></ul>
+
+        <!-- PDF BUTTON -->
+        <button class="download-btn" onclick="downloadPDF()">
+            <i class="fa-solid fa-file-pdf"></i>
+            Download as PDF
+        </button>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
