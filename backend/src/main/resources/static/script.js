@@ -13,11 +13,11 @@ function generate() {
         hoursPerWeek: hours
     };
 
-    fetch("http://localhost:9090/api/generate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-    })
+   fetch("/api/generate", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+})
     .then(res => {
         if (!res.ok) {
             throw new Error("API request failed");
