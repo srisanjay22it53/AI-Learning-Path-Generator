@@ -5,7 +5,7 @@ WORKDIR /app
 COPY backend/pom.xml .
 COPY backend/src ./src
 
-RUN mvn clean package -DskipTests
+RUN mvn clean package spring-boot:repackage -DskipTests
 
 FROM eclipse-temurin:17-jre
 
@@ -13,4 +13,6 @@ WORKDIR /app
 
 COPY --from=build /app/target/*.jar app.jar
 
-CMD ["java", "-jar", "app.jar"]
+EXPOSE 10000
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
